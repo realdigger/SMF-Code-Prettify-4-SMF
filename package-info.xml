@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.simplemachines.org/xml/package-info">
+<package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
+
+    <id>digger:code_prettify_4_smf</id>
+    <name>Code Prettify 4 SMF</name>
+    <type>modification</type>
+    <version>1.0</version>
+
+    <install for="2.0 - 2.0.99">
+        <readme type="file" parsebbc="true">readme/english.txt</readme>
+        <readme type="file" parsebbc="true" lang="russian">readme/russian.txt</readme>		
+        <readme type="file" parsebbc="true" lang="russian-utf8">readme/russian-utf8.txt</readme>        
+        <require-dir name="google-code-prettify" destination="$themedir/scripts" />
+        <require-file name="prettify.css" destination="$themedir/css" />
+        <require-file name="CodePrettify.php" destination="$sourcedir" />
+        <code>modification.php</code>
+    </install>
+
+    <uninstall for="2.0 - 2.0.99">
+        <remove-dir name="$themedir/scripts/google-code-prettify" />
+        <remove-file name="$themedir/scripts/prettify.css" />
+        <remove-file name="$sourcedir/CodePrettify.php" />
+        <code>modification.php</code>
+    </uninstall>
+
+</package-info>
